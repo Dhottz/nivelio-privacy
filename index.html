@@ -1,49 +1,290 @@
-**Política de Privacidade – NIVELio**
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade | NIVELio</title>
+  <style>
+    :root {
+      --bg: #f4f8fb;
+      --card: #ffffff;
+      --text: #17324d;
+      --muted: #5d748c;
+      --primary: #1e88e5;
+      --primary-dark: #1565c0;
+      --accent: #e3f2fd;
+      --border: #d9e6f2;
+      --shadow: 0 12px 30px rgba(20, 50, 80, 0.10);
+      --radius: 20px;
+      --max: 920px;
+    }
 
-Última atualização: 2026
+    * {
+      box-sizing: border-box;
+    }
 
-O aplicativo NIVELio foi desenvolvido com o objetivo de monitorar níveis de água, status de sistemas hidráulicos e auxiliar na gestão eficiente de recursos hídricos em condomínios e instalações.
+    html {
+      scroll-behavior: smooth;
+    }
 
-## 1. Coleta de Dados
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(30, 136, 229, 0.10), transparent 28%),
+        linear-gradient(180deg, #f7fbff 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-O NIVELio pode coletar informações como:
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
 
-* Dados de uso do aplicativo
-* Informações técnicas do dispositivo
-* Dados enviados pelos dispositivos conectados (como níveis de reservatórios)
+    .hero {
+      background: linear-gradient(135deg, #1e88e5 0%, #42a5f5 100%);
+      color: #fff;
+      border-radius: 28px;
+      padding: 36px 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
 
-O aplicativo não coleta dados pessoais sensíveis sem consentimento do usuário.
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      right: -60px;
+      top: -60px;
+      background: rgba(255, 255, 255, 0.12);
+    }
 
-## 2. Uso das Informações
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.22);
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.2px;
+      margin-bottom: 16px;
+    }
 
-As informações coletadas são utilizadas para:
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 5vw, 42px);
+      line-height: 1.15;
+    }
 
-* Exibir dados de monitoramento em tempo real
-* Melhorar o desempenho e a experiência do aplicativo
-* Garantir o funcionamento adequado do sistema
+    .hero p {
+      margin: 0;
+      max-width: 700px;
+      color: rgba(255,255,255,0.95);
+      font-size: 16px;
+    }
 
-## 3. Compartilhamento de Dados
+    .meta {
+      margin-top: 18px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.92);
+    }
 
-O NIVELio não vende, aluga ou compartilha dados pessoais com terceiros, exceto quando necessário para funcionamento do serviço (como infraestrutura de servidores).
+    .card {
+      margin-top: 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
 
-## 4. Segurança
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
 
-Os dados são transmitidos utilizando protocolos seguros (HTTPS) e armazenados de forma protegida.
+    .toc a {
+      text-decoration: none;
+      color: var(--primary-dark);
+      background: var(--accent);
+      border: 1px solid #cbe3fb;
+      padding: 12px 14px;
+      border-radius: 14px;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
 
-## 5. Permissões
+    .toc a:hover {
+      transform: translateY(-1px);
+      background: #d8ecfd;
+    }
 
-O aplicativo pode solicitar permissões como:
+    h2 {
+      font-size: 24px;
+      margin: 0 0 12px;
+      color: #10385d;
+    }
 
-* Acesso à internet
-* Bluetooth (quando necessário para comunicação com dispositivos)
+    section + section {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
 
-Essas permissões são utilizadas exclusivamente para o funcionamento do sistema.
+    p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
 
-## 6. Alterações
+    ul {
+      margin: 8px 0 0;
+      padding-left: 22px;
+      color: var(--muted);
+    }
 
-Esta política pode ser atualizada periodicamente. Recomendamos a revisão regular.
+    li + li {
+      margin-top: 8px;
+    }
 
-## 7. Contato
+    .contact {
+      background: linear-gradient(180deg, #f8fcff 0%, #eef7ff 100%);
+      border: 1px solid #d6eafc;
+      border-radius: 18px;
+      padding: 18px;
+      margin-top: 12px;
+    }
 
-Para dúvidas ou solicitações:
-Email: [contato@hottzlab.com](mailto:contato@hottzlab.com)
+    .contact strong {
+      color: var(--text);
+    }
+
+    a.link {
+      color: var(--primary-dark);
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      color: #6e8398;
+      font-size: 14px;
+      margin-top: 24px;
+      padding-bottom: 10px;
+    }
+
+    @media (max-width: 640px) {
+      .hero,
+      .card {
+        padding: 22px;
+      }
+
+      .wrap {
+        padding: 18px 14px 44px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="badge">NIVELio • Documento oficial</div>
+      <h1>Política de Privacidade</h1>
+      <p>
+        Esta política explica como o NIVELio coleta, utiliza, armazena e protege informações relacionadas ao uso do aplicativo e dos dispositivos conectados ao sistema.
+      </p>
+      <div class="meta">Última atualização: 16 de abril de 2026</div>
+    </header>
+
+    <div class="card">
+      <h2>Resumo</h2>
+      <p>
+        O NIVELio é uma solução voltada ao monitoramento de níveis de água, status de sistemas hidráulicos e apoio à gestão eficiente de reservatórios e bombas em condomínios e instalações similares.
+      </p>
+      <div class="toc">
+        <a href="#coleta">1. Coleta de dados</a>
+        <a href="#uso">2. Uso das informações</a>
+        <a href="#compartilhamento">3. Compartilhamento</a>
+        <a href="#seguranca">4. Segurança</a>
+        <a href="#permissoes">5. Permissões</a>
+        <a href="#alteracoes">6. Alterações</a>
+        <a href="#contato">7. Contato</a>
+      </div>
+    </div>
+
+    <main class="card">
+      <section id="coleta">
+        <h2>1. Coleta de dados</h2>
+        <p>O NIVELio pode coletar informações necessárias para o funcionamento do serviço, como:</p>
+        <ul>
+          <li>dados de uso do aplicativo;</li>
+          <li>informações técnicas do dispositivo, como modelo do aparelho, sistema operacional e identificadores necessários para operação do serviço;</li>
+          <li>dados enviados pelos dispositivos conectados ao sistema, como níveis de reservatórios, status de bomba e informações operacionais relacionadas ao monitoramento.</li>
+        </ul>
+        <p>O aplicativo não coleta dados pessoais sensíveis sem consentimento do usuário.</p>
+      </section>
+
+      <section id="uso">
+        <h2>2. Uso das informações</h2>
+        <p>As informações coletadas são utilizadas para:</p>
+        <ul>
+          <li>exibir dados de monitoramento em tempo real;</li>
+          <li>permitir o acompanhamento do funcionamento do sistema;</li>
+          <li>melhorar a estabilidade, o desempenho e a experiência de uso do aplicativo;</li>
+          <li>garantir o funcionamento adequado da plataforma e dos recursos oferecidos.</li>
+        </ul>
+      </section>
+
+      <section id="compartilhamento">
+        <h2>3. Compartilhamento de dados</h2>
+        <p>
+          O NIVELio não vende nem aluga dados pessoais dos usuários. Informações poderão ser tratadas por fornecedores de infraestrutura e serviços essenciais ao funcionamento da plataforma, sempre dentro do necessário para operação, segurança e manutenção do sistema.
+        </p>
+      </section>
+
+      <section id="seguranca">
+        <h2>4. Segurança</h2>
+        <p>
+          O NIVELio adota medidas técnicas e organizacionais para proteger as informações tratadas, incluindo o uso de protocolos seguros de transmissão, como HTTPS, e mecanismos de armazenamento protegidos conforme a natureza do serviço.
+        </p>
+      </section>
+
+      <section id="permissoes">
+        <h2>5. Permissões do aplicativo</h2>
+        <p>O aplicativo pode solicitar permissões necessárias para funcionamento, como:</p>
+        <ul>
+          <li>acesso à internet;</li>
+          <li>bluetooth, quando necessário para comunicação com dispositivos compatíveis;</li>
+          <li>notificações, quando utilizadas para alertas e eventos do sistema.</li>
+        </ul>
+        <p>Essas permissões são utilizadas exclusivamente para os recursos relacionados ao funcionamento do NIVELio.</p>
+      </section>
+
+      <section id="alteracoes">
+        <h2>6. Alterações nesta política</h2>
+        <p>
+          Esta Política de Privacidade poderá ser atualizada periodicamente para refletir melhorias no aplicativo, alterações regulatórias ou mudanças operacionais. Recomendamos a revisão regular deste documento.
+        </p>
+      </section>
+
+      <section id="contato">
+        <h2>7. Contato</h2>
+        <p>Em caso de dúvidas, solicitações ou contato relacionado à privacidade, utilize o canal abaixo:</p>
+        <div class="contact">
+          <strong>E-mail:</strong> <a class="link" href="mailto:contato@hottzlab.com">contato@hottzlab.com</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 NIVELio. Todos os direitos reservados.
+    </footer>
+  </div>
+</body>
+</html>
